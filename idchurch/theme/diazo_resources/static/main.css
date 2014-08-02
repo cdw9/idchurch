@@ -1,5 +1,55 @@
-/* Stylesheet for the 'ICustomTheme' Plone browser layer */
-
 body {
-    background-color: pink;
+    background-color: #333333;
+}
+#page-wrapper {
+    width: 960px;
+    margin: 30px auto;
+}
+header {
+    float: right;
+    width: 250px;
+}
+#portal-personaltools-wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+#logo img {
+    width: 100%;
+}
+#globalnav {
+    margin-top: 10px;
+}
+#globalnav li {
+    width: 125px;
+    float: left;
+    background: #000000;
+    margin-bottom: 3px;
+}
+#globalnav li:nth-of-type(odd) {
+    width: 122px;
+    margin-right: 3px;
+}
+#globalnav .selected,
+#globalnav li:hover {
+    background: #222222;
+}
+#globalnav a,
+#globalnav a:visited {
+    display: table-cell;
+    color: #ffffff;
+    text-transform: uppercase;
+    height: 65px;
+    vertical-align: middle;
+    text-align: center;
+    width: 124px;
+}
+
+section {
+    float: left;
+    width: calc(100% - 270px);
+}
+#content {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 1em;
 }

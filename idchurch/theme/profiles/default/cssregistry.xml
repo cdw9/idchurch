@@ -1,21 +1,107 @@
 <?xml version="1.0"?>
 <object name="portal_css">
-
-<!--
-
- <stylesheet id="public.css"
-    expression="not: request/HTTP_X_THEME_ENABLED | nothing"/>
- <stylesheet id="columns.css"
-    expression="not: request/HTTP_X_THEME_ENABLED | nothing"/>
- <stylesheet id="portlets.css"
-    expression="not: request/HTTP_X_THEME_ENABLED | nothing"/>
+    
+  <stylesheet remove="true"
+     id="reset.css"/>
+  <stylesheet remove="true"
+     id="public.css"/>
+  <stylesheet remove="true"
+     id="base.css"/>
+  <stylesheet remove="true"
+     id="portlets.css"/>
+  <stylesheet remove="true"
+     id="member.css"/>
+  <stylesheet remove="true"
+     id="forms.css"/>
+  <stylesheet remove="true"
+     id="controlpanel.css"/>
+  <stylesheet remove="true"
+     id="columns.css"/>
+  <stylesheet remove="true"
+     id="authoring.css"/>
+  <stylesheet remove="true"
+     id="IEFixes.css"/>
+  <stylesheet remove="true"
+     id="deprecated.css"/>
+  <stylesheet remove="true"
+     id="navtree.css"/>
+  <stylesheet remove="true"
+    id="invisibles.css"/>
+  <stylesheet remove="true"
+     id="print.css"/>
+  <stylesheet remove="true"
+     id="mobile.css"/>
+  <stylesheet remove="true"
+     id="RTL.css"/>
+     
+  <stylesheet title=""
+     id="++theme++idchurch.theme/static/reset.css"
+     media="screen" rel="stylesheet" rendering="link"
+     cacheable="True" compression="safe" cookable="True"
+     enabled="1" expression="" insert-before="*"
+     applyPrefix="False"/>
   
+  <stylesheet title=""
+     id="++theme++idchurch.theme/static/public.css"
+     media="screen" rel="stylesheet" rendering="link"
+     cacheable="True" compression="safe" cookable="True"
+     enabled="1" expression="" insert-after="++theme++idchurch.theme/static/reset.css"
+     applyPrefix="False"/>
+  
+  <stylesheet title=""
+     id="++theme++idchurch.theme/static/base.css"
+     media="screen" rel="stylesheet" rendering="link"
+     cacheable="True" compression="safe" cookable="True"
+     enabled="1" expression="" insert-after="++theme++idchurch.theme/static/public.css"
+     applyPrefix="False"/>
+  
+  <stylesheet title=""
+     id="++theme++idchurch.theme/static/portlets.css"
+     media="screen" rel="stylesheet" rendering="link"
+     cacheable="True" compression="safe" cookable="True"
+     enabled="1" expression="" insert-after="++theme++idchurch.theme/static/base.css"
+     applyPrefix="False"/>
+  
+  <stylesheet title=""
+     id="++theme++idchurch.theme/static/member.css"
+     media="screen" rel="stylesheet" rendering="link"
+     cacheable="True" compression="safe" cookable="True"
+     enabled="1" expression="" insert-after="++theme++idchurch.theme/static/portlets.css"
+     applyPrefix="False"/>
+  
+  <stylesheet title=""
+     id="++theme++idchurch.theme/static/forms.css"
+     media="screen" rel="stylesheet" rendering="link"
+     cacheable="True" compression="safe" cookable="True"
+     enabled="1" expression="" insert-after="++theme++idchurch.theme/static/member.css"
+     applyPrefix="False"/>
+  
+  <stylesheet title=""
+     id="++theme++idchurch.theme/static/controlpanel.css"
+     media="screen" rel="stylesheet" rendering="link"
+     cacheable="True" compression="safe" cookable="True"
+     enabled="1" expression="" insert-after="++theme++idchurch.theme/static/forms.css"
+     applyPrefix="False"/>
+  
+  <stylesheet title=""
+     id="++theme++idchurch.theme/static/columns.css"
+     media="screen" rel="stylesheet" rendering="link"
+     cacheable="True" compression="safe" cookable="True"
+     enabled="1" expression="" insert-after="++theme++idchurch.theme/static/controlpanel.css"
+     applyPrefix="False"/>
+  
+  <stylesheet title=""
+     id="++theme++idchurch.theme/static/authoring.css"
+     media="screen" rel="stylesheet" rendering="link"
+     cacheable="True" compression="safe" cookable="True"
+     enabled="1" expression="" insert-after="++theme++idchurch.theme/static/columns.css"
+     applyPrefix="False"/>
+
  <stylesheet title=""
     id="++theme++idchurch.theme/static/main.css"
     media="screen" rel="stylesheet" rendering="link"
     cacheable="True" compression="safe" cookable="True"
     enabled="1" expression="request/HTTP_X_THEME_ENABLED"
     applyPrefix="True"/>
- -->
  
 </object>

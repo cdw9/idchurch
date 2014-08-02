@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="idchurch.content">
+<body>
+    <metal:content-core fill-slot="content-core">
+    
+        <h4>
+            Delivered by
+            <span tal:content="context/preacher">preacher</span>
+            on
+            <tal:date content="context/date_delivered">date delivered</tal:date>
+        </h4>
+        <p>
+            Sermon Series:
+            <tal:sermon content="context/sermon_series">sermon series title</tal:sermon>
+        </p>
+        
+        <tal:audio
+            tal:define="audio string:${context/absolute_url}/@@download/audio_file">
+          <audio controls>
+            <source src="" type="audio/mpeg"
+                tal:attributes="src audio" />
+            <object width="" height=""
+              type="application/x-shockwave-flash"
+              data="++resource++collective.mediaelementjs/flashmediaelement.swf">
+                <param name="audio" value="++resource++collective.mediaelementjs/flashmediaelement.swf" />
+                <param name="flashvars" value="" tal:attributes="value python:'file=%s' % audio" />
+            </object>
+          </audio>
+          <p><a href="" title="Audio Download"
+                tal:attributes="href audio">Download</a></p>
+        </tal:audio>
+
+        <div tal:replace="structure view/w/additional_information/render">
+            Details
+        </div>
+        
+        <p><a href="" tal:attributes="href string:${context/portal_url}/archive">
+            &lt; Back to Sermon Archive
+        </a></p>
+
+    </metal:content-core>
+</body>
+</html>

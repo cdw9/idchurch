@@ -22,24 +22,24 @@
         <!-- Copy link, style, meta tags from Plone head -->
         <after css:theme-children="html head"
                content="/html/head/link | /html/head/style | /html/head/meta" />
+        <after css:theme-children="html head" css:content="html head script" />
 
         <!-- merge classes from Plone body with theme body -->
         <merge attributes="class" css:theme="body" css:content="body" />
 
-        <!-- Copy script tags from Plone head to end of body -->
-        <after css:theme-children="html body" css:content="html head script" />
-
-        <!-- Move inline scripts in content to end of body -->
-        <drop css:content="body script" />
-        <after css:theme-children="html body" css:content="html body script" method="raw" />
-
-        <!-- Insert your own rules here -->
-
-        <!-- This rule pulls in the whole Plone layout. You'll typically replace this
-             with rules that copy particular parts of the content into particular
-             targets in your theme.
-         -->
-        <after css:theme="body p" css:content="#visual-portal-wrapper" />
+        <!-- header -->
+        <before css:theme="#page-wrapper" css:content="#portal-personaltools-wrapper"/>
+        <copy attributes="href" css:theme="#logo" css:content="#portal-logo"/>
+        <replace css:theme-children="#globalnav" css:content="#portal-globalnav li"/>
+        
+        <!-- columns - there will always be content and space for right column, no left -->
+        <replace css:theme-children="#content-area" css:content-children="#portal-column-content"/>
+        <replace css:theme-children="aside" css:content-children="#portal-column-two"/>
+        <strip css:content=".visualPadding"/>
+        <drop css:theme="aside" css:if-not-content="#portal-column-two"/>
+        
+        <drop css:content="#portal-breadcrumbs"/>
+        
 
     </rules>
 

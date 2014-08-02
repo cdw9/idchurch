@@ -4,6 +4,24 @@
     i18n_domain="idchurch.content">
 
   <include package="plone.app.contentmenu" />
+  
+  <browser:page
+     name="sermonview"
+     for="*"
+     layer="zope.interface.Interface"
+     class=".views.SermonView"
+     template="templates/sermonview.pt"
+     permission="zope2.View"
+     />
+
+  <browser:page
+     name="sermonlistview"
+     for="*"
+     layer="zope.interface.Interface"
+     class=".views.SermonListView"
+     template="templates/sermonlistview.pt"
+     permission="zope2.View"
+     />
 
   <!-- -*- extra stuff goes here -*- -->
 
