@@ -31,6 +31,10 @@ setup(
         'plone.app.caching',
         'idchurch',
         'z3c.jbot',
+        'collective.easyslideshow',
+        'collective.listingviews',
+        'collective.mediaelementjs',
+        'collective.panels',
     ],
     entry_points="""
     # -*- Entry points: -*-
