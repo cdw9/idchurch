@@ -4,6 +4,11 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="idchurch.theme">
 
-
+    <browser:page
+       name="homepageview"
+       for="*"
+       template="homepageview.pt"
+       permission="zope2.View"
+       />
 
 </configure>

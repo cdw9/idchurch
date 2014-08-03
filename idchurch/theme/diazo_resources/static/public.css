@@ -60,10 +60,12 @@ h2 a, h3 a, h4 a {
 }
 
 p {
+    margin-bottom: 1em;
 }
 
-a:link, a:visited {
+a, a:visited {
     color: #205c90;
+    border: none;
 }
 a:focus img {
     outline: thin dotted;
@@ -224,12 +226,12 @@ input.searchField {
 
 .collapsible .collapser.collapsed {
     padding-right: 14px;
-    background: url('arrowRight.png') center right no-repeat;
+    background: url('/Plone/arrowRight.png') center right no-repeat;
 }
 
 .collapsible .collapser.expanded {
     padding-right: 14px;
-    background: url('arrowDown.png') center right no-repeat;
+    background: url('/Plone/arrowDown.png') center right no-repeat;
 }
 /* @end */
 
@@ -370,26 +372,22 @@ dl.portlet {
 
 }
 
-#content a:link,
-dl.portlet a:link {
-    color: #205c90;
-    border-bottom: 0.1em solid #ccc;
-}
-
+#content a,
+dl.portlet a,
 #content a:visited,
 dl.portlet a:visited {
-    color: #427597;
-    border-bottom: 0.1em solid #ccc;
+    color: #205c90;
 }
 #content a:hover,
 dl.portlet a:hover {
-    color: #75ad0a !important; /* This one gets an !important because it should always activate in the content area, even when state coloring is active */
+    color: #1C4A5E;
+    text-decoration: underline;
 }
 #content a:target {
     background-color: #ffb;
 }
 #content span.link-external a {
-    background: transparent url(link_icon.png) 0px 1px no-repeat;
+    background: transparent url('/Plone/link_icon.png') 0px 1px no-repeat;
     padding: 1px 0px 1px 16px;
 }
 

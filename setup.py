@@ -35,6 +35,8 @@ setup(
         'collective.listingviews',
         'collective.mediaelementjs',
         'collective.panels',
+        'Products.PloneFormGen',
+        'collective.jbot',
     ],
     entry_points="""
     # -*- Entry points: -*-

@@ -36,7 +36,7 @@
         </div>
         
         <p><a href="" tal:attributes="href string:${context/portal_url}/archive">
-            &lt; Back to Sermon Archive
+            &laquo; Back to Sermon Archive
         </a></p>
 
     </metal:content-core>

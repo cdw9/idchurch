@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="idchurch.theme">
+<body>
+    
+    <metal:title fill-slot="content-title" />
+    
+    <metal:content-core fill-slot="content-core">
+    
+        <metal:block use-macro="here/slideshow_macros/macros/slideshow">
+          slideshow here...
+        </metal:block>
+        
+        <div tal:replace="structure context/getText">
+            body text
+        </div>
+
+    </metal:content-core>
+</body>
+</html>

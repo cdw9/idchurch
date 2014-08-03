@@ -8,6 +8,7 @@ body {
 header {
     float: right;
     width: 250px;
+    margin-bottom: 1em;
 }
 #portal-personaltools-wrapper {
     width: 960px;
@@ -17,17 +18,16 @@ header {
     width: 100%;
 }
 #globalnav {
-    margin-top: 10px;
+    margin-top: 1em;
 }
 #globalnav li {
-    width: 125px;
+    width: 122px;
     float: left;
     background: #000000;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
 }
 #globalnav li:nth-of-type(odd) {
-    width: 122px;
-    margin-right: 3px;
+    margin-right: 6px;
 }
 #globalnav .selected,
 #globalnav li:hover {
@@ -42,6 +42,42 @@ header {
     vertical-align: middle;
     text-align: center;
     width: 124px;
+    border: 3px double #999999;
+}
+#globalnav .selected a,
+#globalnav li:hover a {
+    border: 3px double #777777;
+}
+#globalnav .social,
+#globalnav .social:hover {
+    background-color: transparent;
+}
+#globalnav .social a {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    background: url(../images/social.png) no-repeat top left;
+    text-indent: -300px;
+    overflow: hidden;
+    margin-top: 15px;
+    border: none;
+}
+#globalnav .social a,
+#globalnav .social:hover a {
+    border: none;
+}
+#globalnav .social .fb {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+#globalnav .social .fb:hover {
+    background-position: -42px top;
+}
+#globalnav .social .tw {
+    background-position: -83px top;
+}
+#globalnav .social .tw:hover {
+    background-position: -124px top;
 }
 
 section {
@@ -52,4 +88,110 @@ section {
     background-color: #ffffff;
     margin: 0;
     padding: 1em;
+    border: 3px solid #555555;
+}
+aside {
+    clear: right;
+    float: right;
+    width: 250px;
+}
+.portletStaticText {
+    padding: 1em;
+    color: #ffffff;
+}
+.portletStaticText h3 {
+    color: #ffffff;
+}
+
+footer {
+    margin-top: 1em;
+}
+footer > div {
+    width: 33.3%;
+    font-size: 80%;
+    float: left;
+    color: #bbbbbb;
+}
+footer strong {
+    color: #eeeeee;
+}
+footer a,
+footer a:visited {
+    color: #3A79AD;
+    font-weight: bold;
+}
+.donate a,
+.donate a:visited {
+    background-color: #216b21;
+    border-radius: 20px;
+    color: #ffffff;
+    display: block;
+    font-size: 16px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.donate a:hover {
+    background-color: #0E9E0E;
+}
+
+/* homepage */
+.template-homepageview #content {
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: #ffffff;
+}
+.template-homepageview #content h3 {
+    color: #ffffff;
+}
+#slideshow {
+    margin-bottom: 1em;
+}
+/* hide display menu for pages with custom views */
+.template-sermonlistview #plone-contentmenu-display,
+.template-homepageview #plone-contentmenu-display {
+    display: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 960px) {
+    #page-wrapper {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 650px) {
+    header {
+        width: 100%;
+        float: none;
+    }
+    #portal-personaltools-wrapper {
+        width: 100%;
+    }
+    #logo {
+        float: left;
+        margin: 0 1em 0 3px;
+    }
+    #logo img {
+        max-width: 150px;
+    }
+    #globalnav li {
+        margin-right: 3px;
+    }
+    section {
+        float: none;
+        width: 100%;
+        clear: both;
+    }
+    #content img {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 475px) {
+    footer > div {
+        width: 90%;
+        padding: 0 5%;
+        clear: both;
+        text-align: center;
+    }
 }
