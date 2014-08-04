@@ -16,6 +16,7 @@ header {
 }
 #logo img {
     width: 100%;
+    border-radius: 20px;
 }
 #globalnav {
     margin-top: 1em;
@@ -43,7 +44,9 @@ header {
     text-align: center;
     width: 124px;
     border: 3px double #999999;
+    font-family: 'Syncopate', sans-serif;
 }
+
 #globalnav .selected a,
 #globalnav li:hover a {
     border: 3px double #777777;
@@ -90,6 +93,26 @@ section {
     padding: 1em;
     border: 3px solid #555555;
 }
+#content h1.documentFirstHeading {
+    text-align: right;
+    font-family: 'Syncopate',sans-serif;
+    font-size: 30px;
+    padding: 5px 10px 0 0;
+    text-transform: uppercase;
+}
+#content h1.documentFirstHeading::after {
+    content: 'x';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    font-size: 22px;
+    overflow: hidden;
+    background-color: #000000;
+    color: #000000;
+}
+#content .documentDescription {
+    margin-bottom: 1em;
+}
 aside {
     clear: right;
     float: right;
@@ -102,9 +125,26 @@ aside {
 .portletStaticText h3 {
     color: #ffffff;
 }
-
+.button a,
+.button a:visited {
+    background-color: #3a79ad;
+    border-radius: 20px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: 'Syncopate', sans-serif;
+}
+.button a:hover {
+    background-color: #29618E;
+}
 footer {
-    margin-top: 1em;
+    margin-top: 2em;
+    border-top: 1px solid #555555;
+    padding-top: 1em;
 }
 footer > div {
     width: 33.3%;
@@ -117,19 +157,14 @@ footer strong {
 }
 footer a,
 footer a:visited {
-    color: #3A79AD;
     font-weight: bold;
+}
+footer p {
+    margin-left: 3em;
 }
 .donate a,
 .donate a:visited {
     background-color: #216b21;
-    border-radius: 20px;
-    color: #ffffff;
-    display: block;
-    font-size: 16px;
-    padding: 10px 30px;
-    text-align: center;
-    text-transform: uppercase;
 }
 .donate a:hover {
     background-color: #0E9E0E;
@@ -148,6 +183,35 @@ footer a:visited {
 #slideshow {
     margin-bottom: 1em;
 }
+#latest-sermon {
+    float: right;
+    border-left: 1px solid #555555;
+    margin-left: 1em;
+    padding-left: 1em;
+    font-size: 20px;
+    line-height: 23px;
+    width: 33.3%;
+    text-align: right;
+}
+#latest-sermon h4 {
+    text-transform: uppercase;
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 0.5em;
+}
+#latest-sermon p {
+    font-weight: bold;
+}
+#latest-sermon .button {
+    margin-top: 1em;
+}
+#homepage-text {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 30px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
 /* hide display menu for pages with custom views */
 .template-sermonlistview #plone-contentmenu-display,
 .template-homepageview #plone-contentmenu-display {
@@ -159,8 +223,11 @@ footer a:visited {
     #page-wrapper {
         width: 100%;
     }
+    #slideshow {
+        display: none;
+    }
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
     header {
         width: 100%;
         float: none;
@@ -186,12 +253,52 @@ footer a:visited {
     #content img {
         max-width: 100%;
     }
+    .template-homepageview #content-area {
+        padding-top: 1em;
+    }
+    
+    #content-core img {
+        float: none;
+    }
 }
 @media screen and (max-width: 475px) {
+    #globalnav {
+        float: right;
+        width: calc(100% - 175px);
+        margin-top: 0;
+    }
+    #latest-sermon {
+        float: none;
+        width: 96%;
+        border-left: none;
+        text-align: left;
+        margin: 0 0 1em;
+        padding: 0 2%;
+    }
+    #homepage-text {
+        padding: 0 2%;
+    }
+    aside {
+        float: none;
+        width: 100%;
+    }
     footer > div {
         width: 90%;
         padding: 0 5%;
         clear: both;
         text-align: center;
+    }
+    footer p {
+        margin-left: 0;
+    }
+    footer .donate {
+        margin-bottom: 1em;
+    }
+}
+@media screen and (max-width: 427px) {
+    #globalnav .social {
+        left: 11px;
+        position: absolute;
+        top: 187px;
     }
 }

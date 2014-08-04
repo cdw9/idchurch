@@ -64,11 +64,14 @@ p {
 }
 
 a, a:visited {
-    color: #205c90;
+    color: #3a79ad;
     border: none;
 }
 a:focus img {
     outline: thin dotted;
+}
+a:hover {
+    color: #29618E;
 }
 dt {
     font-weight: bold;
@@ -372,17 +375,6 @@ dl.portlet {
 
 }
 
-#content a,
-dl.portlet a,
-#content a:visited,
-dl.portlet a:visited {
-    color: #205c90;
-}
-#content a:hover,
-dl.portlet a:hover {
-    color: #1C4A5E;
-    text-decoration: underline;
-}
 #content a:target {
     background-color: #ffb;
 }

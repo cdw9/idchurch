@@ -22,7 +22,7 @@
      template="templates/sermonlistview.pt"
      permission="zope2.View"
      />
-
+  
   <!-- -*- extra stuff goes here -*- -->
 
 </configure>

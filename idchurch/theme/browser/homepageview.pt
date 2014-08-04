@@ -11,7 +11,23 @@
           slideshow here...
         </metal:block>
         
-        <div tal:replace="structure context/getText">
+        <div id="latest-sermon">
+            <h4>Latest Sermon</h4>
+            <tal:sermons define="sermons python:context.portal_catalog(portal_type='sermon', review_state='published', sort_on='Date', sort_order='reverse')[:1]">
+                <tal:rep repeat="sermon sermons">
+                    "<span tal:replace="sermon/Title">Latest Sermon</span>"
+                    <div class="button">
+                        <a href=""
+                           tal:repeat="sermon sermons"
+                           tal:attributes="href sermon/getURL">
+                           Listen Online&nbsp;&raquo;
+                        </a>
+                    </div>
+                </tal:rep>
+            </tal:sermons>
+        </div>
+        
+        <div id="homepage-text" tal:content="structure context/getText">
             body text
         </div>
 
