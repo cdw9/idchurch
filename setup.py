@@ -28,6 +28,7 @@ setup(
         # -*- Extra requirements: -*-
         'sixfeetup.utils>=2.8',
         'Plone',
+        'plone.api',
         'plone.app.caching',
         'idchurch',
         'z3c.jbot',

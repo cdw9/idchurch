@@ -109,6 +109,7 @@ section {
     overflow: hidden;
     background-color: #000000;
     color: #000000;
+    margin-left: 10px;
 }
 #content .documentDescription {
     margin-bottom: 1em;
