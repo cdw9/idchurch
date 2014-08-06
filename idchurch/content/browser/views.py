@@ -21,9 +21,8 @@ class SermonListView(BrowserView):
         brains = catalog(portal_type='sermon')
         cachekey = sum([int(i.modified) for i in brains])
         return cachekey
-    
+
     @ram.cache(_sermons_cachekey)
-    import pdb; pdb.set_trace()
     def sermons(self):
         """ Get a listing of the sermons
         """
