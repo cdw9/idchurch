@@ -8,7 +8,8 @@
             Delivered by
             <span tal:content="context/preacher">preacher</span>
             on
-            <tal:date content="context/date_delivered">date delivered</tal:date>
+            <tal:date define="DateTime python:modules['DateTime'].DateTime;"
+                      content="python:DateTime(context.sermon_date).strftime('%B %e, %Y')">date delivered</tal:date>
         </h4>
         <p>
             Sermon Series:

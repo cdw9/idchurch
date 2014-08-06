@@ -31,8 +31,8 @@
     &lt;schema&gt;
       &lt;field name="sermon_series" type="zope.schema.TextLine"&gt;
         &lt;description/&gt;
-        &lt;title&gt;Sermon Series&lt;/title&gt;
         &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Sermon Series&lt;/title&gt;
       &lt;/field&gt;
       &lt;field name="preacher" type="zope.schema.Choice"&gt;
         &lt;description/&gt;
@@ -43,14 +43,14 @@
           &lt;element&gt;Guest&lt;/element&gt;
         &lt;/values&gt;
       &lt;/field&gt;
-      &lt;field name="date_delivered" type="zope.schema.Date"&gt;
+      &lt;field name="sermon_date" type="zope.schema.Datetime"&gt;
         &lt;description/&gt;
-        &lt;title&gt;Date Delivered&lt;/title&gt;
+        &lt;title&gt;Sermon Date&lt;/title&gt;
       &lt;/field&gt;
       &lt;field name="audio_file" type="plone.namedfile.field.NamedBlobFile"&gt;
         &lt;description/&gt;
-        &lt;title&gt;Audio File&lt;/title&gt;
         &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Audio File&lt;/title&gt;
       &lt;/field&gt;
       &lt;field name="additional_information" type="plone.app.textfield.RichText"&gt;
         &lt;description&gt;For including any extra links related to the sermon (YouTube video etc)&lt;/description&gt;

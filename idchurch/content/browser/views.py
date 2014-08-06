@@ -32,6 +32,7 @@ class SermonListView(BrowserView):
 
         brains = portal_catalog(portal_type="sermon",
                                 path=current_path,
+                                review_state="published",
                                 sort_on="getObjPositionInParent",
                                 sort_order="reverse")
         for brain in brains:
@@ -41,6 +42,6 @@ class SermonListView(BrowserView):
                 'url': brain.getURL(),
                 'sermon_series': obj.sermon_series,
                 'preacher': obj.preacher,
-                'date_delivered': obj.date_delivered,
+                'sermon_date': obj.sermon_date,
                 })
         return results

@@ -23,7 +23,9 @@
     </thead>
     <tbody>
         <tr tal:repeat="sermon view/sermons">
-            <td tal:content="sermon/date_delivered">
+            <td tal:define="DateTime python:modules['DateTime'].DateTime;
+                            sermon_date sermon/sermon_date"
+                tal:content="python:DateTime(sermon_date).strftime('%B %e, %Y')">
                 Date
             </td>
             <td>
