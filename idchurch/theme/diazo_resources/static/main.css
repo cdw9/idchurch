@@ -178,9 +178,6 @@ footer p {
     padding: 0;
     color: #ffffff;
 }
-.template-homepageview #content h3 {
-    color: #ffffff;
-}
 #slideshow {
     margin-bottom: 1em;
 }
@@ -188,13 +185,14 @@ footer p {
     float: right;
     border-left: 1px solid #555555;
     margin-left: 1em;
-    padding-left: 1em;
+    padding: 0 0 1em 1em;
     font-size: 20px;
     line-height: 23px;
     width: 33.3%;
     text-align: right;
 }
-#latest-sermon h4 {
+#latest-sermon h4,
+#homepage-text h3 {
     text-transform: uppercase;
     color: #999999;
     font-size: 14px;
@@ -206,11 +204,16 @@ footer p {
 #latest-sermon .button {
     margin-top: 1em;
 }
-#homepage-text {
+#homepage-text h2 {
     font-family: 'Syncopate', sans-serif;
     font-size: 30px;
     line-height: 32px;
     text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 1em;
+}
+#homepage-text p {
+    font-size: 20px;
 }
 
 /* hide display menu for pages with custom views */

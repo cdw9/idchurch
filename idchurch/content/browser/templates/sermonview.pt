@@ -11,13 +11,15 @@
             <tal:date define="DateTime python:modules['DateTime'].DateTime;"
                       content="python:DateTime(context.sermon_date).strftime('%B %e, %Y')">date delivered</tal:date>
         </h4>
-        <p>
+        <p tal:define="series context/sermon_series"
+           tal:condition="series">
             Sermon Series:
-            <tal:sermon content="context/sermon_series">sermon series title</tal:sermon>
+            <tal:sermon content="series">sermon series title</tal:sermon>
         </p>
         
         <tal:audio
-            tal:define="audio string:${context/absolute_url}/@@download/audio_file">
+            tal:define="audio string:${context/absolute_url}/@@download/audio_file"
+            tal:condition="context/audio_file">
           <audio controls>
             <source src="" type="audio/mpeg"
                 tal:attributes="src audio" />

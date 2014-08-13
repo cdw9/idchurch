@@ -7,7 +7,9 @@
     <!-- Apply the following rules to standard Plone pages -->
     <rules css:if-content="#visual-portal-wrapper">
         
-        <notheme if="$ajax_load" />
+        <rules css:if-not-content=".template-login_success">
+            <notheme if="$ajax_load" css:if-not-content=".template-login_failed"/>
+        </rules>
         <theme href="index.html" />
 
         <!-- Replace title with Plone's page title  -->
@@ -36,7 +38,8 @@
         <before css:theme-children="#content-area" css:content-children="#portal-column-content"/>
         <replace css:theme-children="aside" css:content-children="#portal-column-two"/>
         <strip css:content=".visualPadding"/>
-        <drop css:theme="aside" css:if-not-content="#portal-column-two"/>
+        <drop css:theme="aside" css:if-not-content="#portal-column-two, #portlet-prefs"/>
+        <after css:theme-children="aside" css:content="#portlet-prefs"/>
         
         <drop css:content="#portal-breadcrumbs"/>
         
